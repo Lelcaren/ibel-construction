@@ -3,8 +3,8 @@ import Navbar from "../components/Navbar";
 import HeroAbout from "../components/HeroAbout";
 import Commitment from "../components/Commitment";
 import Team from "../components/Team";
-import Timeline from "../components/Timeline";
-import Testimonial from "../components/Testimonial";
+
+
 import Footer from "../components/Footer";
 import { ChevronRight } from 'lucide-react';
 
@@ -112,8 +112,8 @@ const About = () => {
       <HeroAbout />
       <Commitment />
       <Team />
-      <Timeline />
-      <Testimonial />
+     
+    
       <CallToAction />
       <Footer brandPlaceholder="/rectangle-1@2x.png" />
     </div>

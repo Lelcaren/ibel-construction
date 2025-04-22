@@ -4,7 +4,7 @@ import Excellence from "../components/Excellence";
 import Expert from "../components/Expert";
 import Visions from "../components/Visions";
 import Process from "../components/Process";
-import CTAServices from "../components/CTAServices";
+
 import Footer from "../components/Footer";
 
 const Services = () => {
@@ -117,7 +117,7 @@ const Services = () => {
         <Expert />
         <Visions />
         <Process />
-        <CTAServices />
+  
       </div>
       
       {/* Footer with Same Props as Home */}

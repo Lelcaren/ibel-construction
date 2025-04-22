@@ -28,13 +28,12 @@ const Footer = ({ className = "", brandPlaceholder }) => {
       <div className="
         w-full 
         max-w-[1200px] 
-        min-w-[400px] 
         mx-auto 
-        px-4
       ">
         {/* Subscription Section */}
         <div className="
           grid 
+          grid-cols-1 
           md:grid-cols-2 
           gap-8 
           items-center 
@@ -46,6 +45,8 @@ const Footer = ({ className = "", brandPlaceholder }) => {
           <div>
             <h2 className="
               text-2xl 
+              sm:text-3xl 
+              lg:text-4xl 
               font-bold 
               mb-4 
               text-gray-800
@@ -53,6 +54,9 @@ const Footer = ({ className = "", brandPlaceholder }) => {
               Stay Connected
             </h2>
             <p className="
+              text-sm 
+              sm:text-base 
+              lg:text-lg 
               text-gray-600 
               mb-6
             ">
@@ -60,56 +64,57 @@ const Footer = ({ className = "", brandPlaceholder }) => {
             </p>
           </div>
           
-          <form onSubmit={handleSubscribe} className="
-            flex 
-            flex-col 
-            sm:flex-row 
-            gap-4
-          ">
-            <input 
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your email address"
-              required
-              className="
-                flex-grow 
-                px-4 
-                py-3 
-                border 
-                border-gray-300 
-                rounded-md 
-                focus:outline-none 
-                focus:ring-2 
-                focus:ring-amber-500
-              "
-            />
-            <button 
-              type="submit"
-              className="
-                bg-gradient-to-r 
-                from-amber-500 
-                to-pink-500 
-                text-white 
-                px-6 
-                py-3 
-                rounded-md 
-                hover:opacity-90 
-                transition-all 
-                flex 
-                items-center 
-                justify-center 
-                gap-2
-              "
-            >
-              Subscribe <ArrowRight size={20} />
-            </button>
-          </form>
+          <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4">
+  <input 
+    type="email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    placeholder="Your email address"
+    required
+    className="
+      flex-grow 
+      px-4 
+      py-3 
+      border 
+      border-gray-300 
+      rounded-md 
+      focus:outline-none 
+      focus:ring-2 
+      focus:ring-amber-500
+    "
+  />
+  <button 
+    type="submit"
+    className="
+      w-full sm:w-auto 
+      px-4 py-3 
+      bg-gradient-to-r 
+      from-amber-500 
+      to-pink-500 
+      text-white 
+      font-semibold 
+      rounded-md 
+      text-sm sm:text-base lg:text-lg 
+      hover:opacity-90 
+      transition-all 
+      flex 
+      items-center 
+      justify-center 
+      gap-2 
+      shadow-md hover:shadow-lg 
+      transform hover:scale-105
+    "
+  >
+    Subscribe <ArrowRight size={20} />
+  </button>
+</form>
+
         </div>
 
         {/* Links Section */}
         <div className="
           grid 
+          grid-cols-1 
           md:grid-cols-2 
           gap-8 
           mb-12
@@ -126,16 +131,18 @@ const Footer = ({ className = "", brandPlaceholder }) => {
             </h3>
             <ul className="space-y-4">
               {[
-                { icon: Mail, text: "support@company.com" },
-                { icon: Phone, text: "+1 (555) 123-4567" },
-                { icon: MapPin, text: "123 Main Street, Anytown USA" },
-                { icon: HelpCircle, text: "Support Center" }
+                { icon: Mail, text: "info@ibelconstruction.co.ke" },
+                { icon: Phone, text: "+ 254721121437" },
+      
               ].map(({ icon: Icon, text }, index) => (
                 <li 
                   key={index} 
                   className="
                     flex 
                     items-center 
+                    text-sm 
+                    sm:text-base 
+                    lg:text-lg 
                     text-gray-600 
                     hover:text-amber-600 
                     transition-colors 
@@ -164,16 +171,17 @@ const Footer = ({ className = "", brandPlaceholder }) => {
                 "About Us", 
                 "Our Services", 
                 "Contact", 
-                "Privacy Policy", 
-                "Terms of Service"
+            
               ].map((item, index) => (
                 <li 
                   key={index} 
                   className="
+                    text-sm 
+                    sm:text-base 
+                    lg:text-lg 
                     text-gray-600 
                     hover:text-amber-600 
-                    hover:translate-x-1 
-                    transition-all 
+                    transition-colors 
                     cursor-pointer
                   "
                 >
@@ -199,7 +207,7 @@ const Footer = ({ className = "", brandPlaceholder }) => {
             src={brandPlaceholder}
             alt="Brand Logo"
             className="
-              h-16 
+              h-12 
               w-auto 
               mx-auto 
               md:mx-0 

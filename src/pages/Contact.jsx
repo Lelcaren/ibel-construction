@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 import Navbar from "../components/Navbar";
 import Map1 from "../components/Map1";
-import Contact1 from "../components/Contact1";
-import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
 
 const Contact = () => {
@@ -136,8 +134,8 @@ const Contact = () => {
           md:space-y-20
         ">
           <Map1 />
-          <Contact1 />
-          <FAQ />
+          
+        
         </div>
       </div>
       

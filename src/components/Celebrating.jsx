@@ -213,7 +213,7 @@ const Celebrating = ({ className = "" }) => {
           "
           loading="lazy"
           alt=""
-          src="/placeholder-image1@2x.png"
+          src="/ibel3.jpg"
         />
       </div>
     </section>

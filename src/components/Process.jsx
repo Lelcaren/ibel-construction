@@ -79,17 +79,17 @@ const Process = ({ className = "" }) => {
           "
         >
           <Column1
-            placeholderImage="/placeholder-image-3@2x.png"
+            placeholderImage="/initial.png"
             heading="Step 1: Initial Consultation to Understand Your Unique Project Needs"
             text="We begin with a detailed discussion to capture your vision and requirements."
           />
           <Column1
-            placeholderImage="/placeholder-image-4@2x.png"
+            placeholderImage="/tailord.png"
             heading="Step 2: Tailored Proposal and Project Planning for Your Approval"
             text="Our team crafts a customized proposal outlining the project scope and timeline."
           />
           <Column1
-            placeholderImage="/placeholder-image-5@2x.png"
+            placeholderImage="/final.png"
             heading="Step 3: Execution with Regular Updates and Quality Assurance Checks"
             text="We ensure transparency and quality through consistent communication and oversight."
           />

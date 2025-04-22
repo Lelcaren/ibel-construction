@@ -5,197 +5,79 @@ import { Check, ArrowRight } from 'lucide-react';
 const Expert = ({ className = "" }) => {
   return (
     <section
-      className={`
-        w-full 
-        max-w-[1440px] 
-        min-w-[400px] 
-        mx-auto 
-        bg-whitesmoke-200 
-        py-28 
-        px-16 
-        flex 
-        flex-col 
-        items-start 
-        justify-start 
-        text-left 
-        text-darkslateblue 
-        font-sans 
-        ${className}
-      `}
+      className={`w-full max-w-[1440px] min-w-[320px] mx-auto bg-whitesmoke-200 py-10 sm:py-16 md:py-20 lg:py-28 px-4 sm:px-6 md:px-10 lg:px-16 overflow-hidden ${className}`}
     >
-      <div className="
-        grid 
-        md:grid-cols-2 
-        gap-12 
-        items-center 
-        w-full
-      ">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-between w-full">
+
         {/* Content Column */}
-        <div className="
-          flex 
-          flex-col 
-          items-start 
-          justify-start 
-          space-y-8
-        ">
+        <div className="flex flex-col items-start justify-start w-full lg:w-1/2 space-y-5 md:space-y-6 lg:space-y-8 order-1 lg:order-1">
           {/* Section Label */}
-          <div className="
-            text-amber-600 
-            font-semibold 
-            text-lg 
-            tracking-wide 
-            uppercase
-          ">
+          <div className="inline-block bg-amber-600/10 text-amber-600 font-semibold text-sm sm:text-base md:text-lg tracking-wide uppercase py-1 px-3 rounded-full">
             Project Management
           </div>
 
           {/* Main Heading */}
-          <h1 className="
-            text-4xl 
-            md:text-5xl 
-            font-bold 
-            leading-tight 
-            text-gray-900
-          ">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900 max-w-full break-words">
             Expert Project Management for Government Contracts
           </h1>
 
           {/* Description */}
-          <p className="
-            text-lg 
-            text-gray-700 
-            leading-relaxed
-          ">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-normal break-words w-full max-w-full">
             Our Project Management services are tailored to handle large-scale government projects with precision and efficiency. With a proven track record, we ensure timely delivery and adherence to all regulatory standards.
           </p>
 
           {/* Key Features */}
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4 w-full max-w-full">
             {[
               "Specialized in large-scale government project management",
               "Proven track record of timely and efficient project delivery",
               "Strict adherence to regulatory standards and compliance"
             ].map((feature, index) => (
-              <div 
-                key={index} 
-                className="
-                  flex 
-                  items-center 
-                  space-x-3 
-                  text-gray-800
-                "
+              <div
+                key={index}
+                className="flex items-center space-x-3 group hover:translate-x-1 transition-transform duration-300"
               >
-                <Check 
-                  className="
-                    text-amber-600 
-                    flex-shrink-0
-                  " 
-                  size={24} 
-                />
-                <span className="text-base">{feature}</span>
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-amber-600 flex items-center justify-center shadow-md group-hover:bg-amber-500 transition-colors">
+                  <Check className="text-white" size={16} aria-hidden="true" />
+                </span>
+                <span className="text-sm sm:text-base text-gray-800 font-medium whitespace-normal break-words w-full max-w-full">
+                  {feature}
+                </span>
               </div>
             ))}
           </div>
 
           {/* Action Buttons */}
-          <div className="
-            flex 
-            items-center 
-            space-x-6 
-            mt-6
-          ">
-            <button className="
-              cursor-pointer 
-              border-buttons1 
-              border-solid 
-              border-[1px] 
-              py-3 
-              px-6 
-              bg-[transparent] 
-              rounded-3xs 
-              [background:linear-gradient(180deg,_#ffc03d,_#f2295b)] 
-              flex 
-              flex-row 
-              items-center 
-              justify-center
-              hover:opacity-90 
-              transition-all
-            ">
-              <div className="
-                relative 
-                text-base 
-                leading-[150%] 
-                font-text-small-normal 
-                text-white 
-                text-left
-                flex 
-                items-center 
-                gap-2
-              ">
-                Learn More <ArrowRight size={20} />
-              </div>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mt-4 w-full sm:w-auto">
+            <button className="w-full sm:w-auto cursor-pointer py-3 sm:py-4 px-6 sm:px-8 rounded-lg bg-gradient-to-r from-amber-500 to-pink-500 text-white font-medium text-base shadow-lg shadow-amber-500/20 hover:shadow-xl hover:shadow-amber-500/30 hover:-translate-y-1 flex items-center justify-center gap-2 transition-all duration-300">
+              Learn More <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </button>
-            <div className="
-              overflow-hidden 
-              flex 
-              flex-row 
-              items-center 
-              justify-center 
-              gap-2
-              text-darkslateblue
-              hover:text-amber-600
-              cursor-pointer
-              transition-colors
-            ">
-              <div className="relative leading-[150%]">Sign Up</div>
+            <button className="w-full sm:w-auto cursor-pointer py-3 px-6 rounded-lg border border-amber-600/30 bg-transparent text-darkslateblue font-medium text-base hover:bg-amber-600/5 hover:border-amber-600 flex items-center justify-center gap-2 transition-all duration-300">
+              Sign Up
               <img
-                className="
-                  h-6 
-                  w-6 
-                  relative 
-                  overflow-hidden 
-                  shrink-0
-                "
+                className="h-5 w-5 relative overflow-hidden"
                 alt=""
                 src="/icon--chevronright.svg"
               />
-            </div>
+            </button>
           </div>
         </div>
 
         {/* Image Column */}
-        <div className="
-          relative 
-          group 
-          overflow-hidden 
-          rounded-lg 
-          shadow-lg
-        ">
-          <img
-            src="/placeholder-image-1@2x.png"
-            alt="Project Management Illustration"
-            className="
-              w-full 
-              h-full 
-              object-cover 
-              transform 
-              group-hover:scale-105 
-              transition-transform 
-              duration-300
-            "
-            loading="lazy"
-          />
-          <div className="
-            absolute 
-            inset-0 
-            bg-gradient-to-r 
-            from-amber-500/20 
-            to-pink-500/20 
-            opacity-0 
-            group-hover:opacity-100 
-            transition-opacity 
-            duration-300
-          "></div>
+        <div className="w-full lg:w-1/2 relative group order-2 lg:order-2 mt-10 lg:mt-0">
+          <div className="overflow-hidden rounded-xl shadow-xl relative aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] transform hover:scale-[1.02] transition-all duration-500 ease-out">
+            <img
+              src="/expert.jpg"
+              alt="Project Management Illustration"
+              className="w-full h-full object-cover transition-all duration-700 group-hover:scale-[1.05]"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/30 via-transparent to-pink-500/20 opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+          </div>
+
+          {/* Decorative elements */}
+          <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-r from-amber-500/20 to-pink-500/20 blur-lg z-0 hidden sm:block"></div>
+          <div className="absolute -top-6 -left-6 w-20 h-20 md:w-28 md:h-28 rounded-full bg-amber-500/10 blur-md z-0 hidden sm:block"></div>
         </div>
       </div>
     </section>
